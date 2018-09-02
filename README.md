@@ -5,15 +5,26 @@
  
  By the end of this tutorial you will be able to create a basic HTML front end with buttons that call smart contract functions. 
  
- ### Preparation
+### Preparation
  
  - Download and Install [MetaMask](https://metamask.io)
  
  - Get some Ropsten Tesnet Ether 
  
- ### Create a basic Smart contract
+### Create a basic Front End
  
  
+ 
+### Create a basic Smart Contract
+
+
+
+### Connect Front End to Smart Contract
+
+
+### Test it
+
+
  
  
  
