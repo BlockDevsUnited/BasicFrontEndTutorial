@@ -129,6 +129,7 @@ provider.listAccounts().then(function(accounts) {
 
 ### Test it
 
+- Serve the webpage
 - See if it works!
  
  
