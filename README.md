@@ -36,8 +36,14 @@ The first step is to create a basic html page. No fancy libraries, just pure bas
  
  ```
  
- - Install python: npm install python -g
- - Serve the webpage: python -m http.server 1337
+ - Install python: 
+ ```
+ npm install python -g
+ ```
+ - Serve the webpage: 
+ ```
+ python -m http.server 1337
+ ```
  
 ### Create a basic Smart Contract
 
