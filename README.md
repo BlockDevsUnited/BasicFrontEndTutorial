@@ -16,21 +16,38 @@
  - Get some Ropsten Tesnet Ether 
  
 ### Create a basic Front End
+
+The first step is to create a basic html page. No fancy libraries, just pure basic html. 
   
  - Create a new directory in your terminal using mkdir <directory name>
  - In your favourite code editor (e.g. Atom, Sublime, or Vscode), open the directory and create a basic html file called index.html
  - Open <html> and <body> tags inside the html page and add some buttons.
-
  - Install python: npm install python -g
  - Serve the webpage: python -m http.server 1337
-
-
  
 ### Create a basic Smart Contract
 
  - Create a smart contract on remix.ethereum.org
- - deploy it. 
- - test it to make sure it works
+ - You can use your own smart contract, or use this basic example contract :
+ 
+```
+pragma solidity ^0.4.24;
+
+contract MoodDiary{
+    
+    string mood;
+    
+    function setMood(string _mood) public{
+        mood = _mood;
+    }
+    
+    function getMood() public view returns(string){
+        return mood;
+    }
+}
+```
+ - deploy the contract on the Ropsten Testnet. 
+ - test it on the Remix "Run" tab to make sure it works
 
 
 ### Connect Front End to Smart Contract
