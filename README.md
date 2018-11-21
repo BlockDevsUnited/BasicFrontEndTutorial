@@ -22,6 +22,20 @@ The first step is to create a basic html page. No fancy libraries, just pure bas
  - Create a new directory in your terminal using mkdir <directory name>
  - In your favourite code editor (e.g. Atom, Sublime, or Vscode), open the directory and create a basic html file called index.html
  - Open <html> and <body> tags inside the html page and add some buttons.
+ ```
+<html>
+<body>
+
+<button></button>
+<button></button>
+<button></button>
+
+</body>
+</html>
+
+ 
+ ```
+ 
  - Install python: npm install python -g
  - Serve the webpage: python -m http.server 1337
  
