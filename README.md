@@ -61,10 +61,49 @@ contract MoodDiary{
 </script>
 ```
 
-- Import the ABI and contract address
-- Create contract object
-- create function to call smart contract function
-- connect function to html button
+- Inside script tags, add the following code to your html page.
+
+- define a new ethers provider
+
+```
+var provider = new ethers.providers.Web3Provider(web3.currentProvider,'rinkeby');
+```
+
+- Import the ABI and contract address, and create a contract object and a signer
+```
+  var MoodContractAddress = "<contract address>";
+  var MoodContractABI = <contract ABI>
+  var MoodContract
+  var signer
+```
+- Connect the signer to your metamask account, and define the contract object using your contract address, ABI, and signer.
+```
+provider.listAccounts().then(function(accounts) {
+      signer = provider.getSigner(accounts[0]);
+      MoodContract = new ethers.Contract(MoodContractAddress, MoodContractABI, signer);
+    })
+```
+
+- create asynchronous functions to call your smart contract functions
+
+```
+  async function getMood(){
+    getMoodPromise = MoodContract.getMood();
+    var Mood = await getMoodPromise;
+    console.log(Mood);
+  }
+
+  async function setMood(){
+    setMoodPromise = MoodContract.setMood("patient");
+    await setMoodPromise;
+  }
+```
+- connect your functions to your html buttons
+```
+
+<button onclick="getMood()"> get Mood </button>
+ <button onclick = "setMood()"> set Mood</button>
+```
 
 
 
