@@ -14,37 +14,59 @@
  - Download and Install [MetaMask](https://metamask.io)
  
  - Get some Ropsten Tesnet Ether 
+   - https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e
+   - https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/
+   
+- Instal a http server. Use any you like, but we reccomend a simple python instance for beginners:
+  - Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
+  - Install python (version 3) (with NPM in a terminal/command prompt): 
+    ```bash
+    npm install python -g
+    ```
+ 
  
 ### Create a basic Front End
 
-The first step is to create a basic html page. No fancy libraries, just pure basic html. 
+The first step is to create a basic html page.
   
- - Create a new directory in your terminal using mkdir <directory name>
- - In your favourite code editor (e.g. Atom, Sublime, or Vscode), open the directory and create a basic html file called index.html
+ - Create a new directory in your terminal using `mkdir <directory name>`
+ - Create a new file called `index.html` by : `touch index.html`
+ - In your favourite code editor, open the file (ex: `atom index.html' )
  - Open <html> and <body> tags inside the html page and add some buttons.
- ```
+ 
+ --- 
+ ```html
+<!DOCTYPE html>
 <html>
+<head>
+<title>Ethersjs Demo</title>
+<style>
+body {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
 <body>
 
-<button></button>
-<button></button>
-<button></button>
+<h1>This is my Ethersjs Demo!</h1>
+<p> Here we can set or get the mood: </p>
+
+<button onclick="getMood()"> get Mood </button>
+<button onclick = "setMood()"> set Mood</button>
 
 </body>
 </html>
+```
+ ---
+ - Serve the webpage via termial/comand prompt from the directoory that has `index.html` in it: 
+   ```bash
+   python -m http.server 1337
+   ```
+ - Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
 
- 
- ```
- 
- - Install python: 
- ```
- npm install python -g
- ```
- - Serve the webpage: 
- ```
- python -m http.server 1337
- ```
- 
 ### Create a basic Smart Contract
 
  - Create a smart contract on remix.ethereum.org
@@ -129,7 +151,6 @@ provider.listAccounts().then(function(accounts) {
 
 ### Test it
 
-- Serve the webpage
 - See if it works!
  
  
