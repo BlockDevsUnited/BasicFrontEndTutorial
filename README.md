@@ -17,7 +17,7 @@
    - https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e
    - https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/
    
-- Instal a http server. Use any you like, but we reccomend a simple python instance for beginners:
+- Install a http server. Use any you like, but we recommend a simple python instance for beginners:
   - Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
   - Install python (version 3) (with NPM in a terminal/command prompt): 
     ```bash
@@ -61,7 +61,7 @@ body {
 </html>
 ```
  ---
- - Serve the webpage via termial/comand prompt from the directoory that has `index.html` in it: 
+ - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it: 
    ```bash
    python -m http.server 1337
    ```
