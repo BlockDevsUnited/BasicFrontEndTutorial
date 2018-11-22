@@ -11,22 +11,27 @@
  
 ### Preparation
  
- - Download and Install [MetaMask](https://metamask.io)
-   - Never used Metamask? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
-    - (the important bits at the moment are in the video from 1:06 to 4:14)
-   - Change to the Ropsten Tesnet:
+1. **Download and Install [MetaMask](https://metamask.io)**
+   1. Never used Metamask? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
+   
+       *The important bits for us are: `1:06 to 4:14`*
+   2. Change to the Ropsten Tesnet:
+   
 <p align="middle">
 <img src="https://btcgeek.com/wp-content/uploads/2018/11/Metamask-Ropsten-Network-1a.png" alt="Metamask-Ropsten-Network-1a.png" width="200">
 </p>
-   - Copy an account's wallet public address
-   - Request some Ropsten Tesnet Ether from a *faucet* loaded into your Metamask Wallet. 
-   - Never done that? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
-   - [Faucet blog explaining how to use it](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
-   - [faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
+
+   3. Copy an account's wallet public address
+2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
+     1. Never done a metamask transaction? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
+     2. [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
+     3. [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
+     
+     
+3. **Install a http server. Use any you like, but we recommend a simple python instance for beginners:**
+   1. Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
+   2. Install python (version 3) (with NPM in a terminal/command prompt): 
    
-- Install a http server. Use any you like, but we recommend a simple python instance for beginners:
-  - Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
-  - Install python (version 3) (with NPM in a terminal/command prompt): 
     ```bash
     npm install python -g
     ```
