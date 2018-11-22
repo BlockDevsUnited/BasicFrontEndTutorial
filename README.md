@@ -66,8 +66,10 @@ The first step is to create a basic html page.
    3. **(OPTIONAL)** Under the Run tab (top right) Set your Enviroment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
    3. Deploy the contract uinde the run tab
    4. Under Deployed Contracts, test out your functions on the Remix Run tab to make sure your contract works as expected!
-   
 
+<p align="middle">
+<img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
+</p>
 ---
 ### Connect Your Webpage to Your Smart Contract
 
