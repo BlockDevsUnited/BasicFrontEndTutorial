@@ -1,5 +1,7 @@
 pragma solidity ^0.4.24;
 
+/// a simple set and get function for mood defined: 
+
 contract MoodDiary{
     
     string mood;
