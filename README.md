@@ -149,14 +149,13 @@ provider.listAccounts().then(function(accounts) {
 <button onclick = "setMood()"> set Mood</button>
 ```
 
+---
 
 ### Test it
 
-- Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
+Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
  
- 
- 
+---
 
-
- 
- 
+### :tada::confetti_ball::tada::confetti_ball::tada: DONE! :tada::confetti_ball::tada::confetti_ball::tada:
+Celebrate! :bowtie: You just made a webpage that interacted with _a real live Ethereum testnet on the internet_! That is not something many folks can say they have done! :rocket:
