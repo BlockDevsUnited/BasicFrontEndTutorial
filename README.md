@@ -23,9 +23,6 @@
 </p>
 
 
-
-
-
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
      1. Never done a metamask transaction? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
      2. [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
@@ -41,7 +38,7 @@
     ```
  
 ---
-### Create a basic Front End
+### Create and Serve a simple Webpage
 
 The first step is to create a basic html page.
   
@@ -55,7 +52,9 @@ The first step is to create a basic html page.
    python -m http.server 1337
    ```
  - Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
+ 
 
+---
 ### Create a basic Smart Contract
 
  - Create a smart contract on [remix.ethereum.org]
@@ -80,7 +79,7 @@ contract MoodDiary{
  - deploy the contract on the Ropsten Testnet. 
  - test it on the Remix "Run" tab to make sure it works
 
-
+---
 ### Connect Front End to Smart Contract
 
 - import the ethers source into your html page
