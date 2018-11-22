@@ -87,24 +87,28 @@ Make a new temporary file to hold:
 
 ### Connect Your Webpage to Your Smart Contract
 
-- Back in your local text editor, import the Ethersjs source into your `index.html` page by adding:
+Back in your local text editor in `index.html`, add the following code to your html page:
+
+1. Import the Ethersjs source into your `index.html` page inside a new set of script tags:
 
 ```html
 <script charset="utf-8"
         src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
         type="text/javascript">
+ 
+ //ADD YOUR CODE HERE
+ 
 </script>
 ```
 
-**Inside a new set of script tags in `index.html`, add the following code to your html page:**
 
-1. Define an ethers provider. In our case it is Ropsten:
+2. Define an ethers provider. In our case it is Ropsten:
 
 ```javascript
 var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten');
 ```
 
-2. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
+3. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
 
 ```javascript
   var MoodContractAddress = "<contract address>";
@@ -113,7 +117,7 @@ var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten')
   var signer
 ```
 
-3. Connect the signer to your metamask account (we use `[0]` as the defalut), and define the contract object using your contract address, ABI, and signer.
+4. Connect the signer to your metamask account (we use `[0]` as the defalut), and define the contract object using your contract address, ABI, and signer.
 
 ```javascript
 provider.listAccounts().then(function(accounts) {
@@ -122,7 +126,7 @@ provider.listAccounts().then(function(accounts) {
     })
 ```
 
-4. Create asynchronous functions to call your smart contract functions
+5. Create asynchronous functions to call your smart contract functions
 
 ```javascript
   async function getMood(){
@@ -137,7 +141,7 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
-5. Connect your functions to your html buttons
+6. Connect your functions to your html buttons
 
 ```html
 
