@@ -68,18 +68,26 @@ The first step is to create a basic html page.
    1. Copy your code into the Remix editor
    2. Complie (and debuf) the code. _Note that it may take a moment to load the compiler_
    3. **(OPTIONAL)** Under the Run tab (top right) Set your Enviroment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
-   3. Deploy the contract uinde the run tab
+   3. Deploy the contract under the Run tab
    4. Under Deployed Contracts, test out your functions on the Remix Run tab to make sure your contract works as expected!
 
 <p align="middle">
 <img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
 </p>
 
+***Be sure to deploy on Roposen via Remix under the `Injected Web3` enviroment and confrim the deploy transaction in Metamask***
+
+Make a new temporary file to hold: 
+   - The deployed contract's address
+      - Copy it via the copy button next to the deployed contracts pulldown in remix's **Run** tab 
+   - The contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) 
+      - Copy it via the copy button under to the contract in remix's **Compile** tab (also in Details) 
+
 ---
 
 ### Connect Your Webpage to Your Smart Contract
 
-- import the ethers source into your html page
+- Back in your local text editor, import the Ethersjs source into your `index.html` page by adding:
 
 ```html
 <script charset="utf-8"
@@ -88,22 +96,25 @@ The first step is to create a basic html page.
 </script>
 ```
 
-- Inside script tags, add the following code to your html page.
+**Inside a new set of script tags in `index.html`, add the following code to your html page:**
 
-- define a new ethers provider
+1. Define an ethers provider. In our case it is Ropsten:
 
 ```javascript
-var provider = new ethers.providers.Web3Provider(web3.currentProvider,'rinkeby');
+var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten');
 ```
 
-- Import the ABI and contract address, and create a contract object and a signer
+2. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
+
 ```javascript
   var MoodContractAddress = "<contract address>";
   var MoodContractABI = <contract ABI>
   var MoodContract
   var signer
 ```
-- Connect the signer to your metamask account, and define the contract object using your contract address, ABI, and signer.
+
+3. Connect the signer to your metamask account (we use `[0]` as the defalut), and define the contract object using your contract address, ABI, and signer.
+
 ```javascript
 provider.listAccounts().then(function(accounts) {
       signer = provider.getSigner(accounts[0]);
@@ -111,7 +122,7 @@ provider.listAccounts().then(function(accounts) {
     })
 ```
 
-- create asynchronous functions to call your smart contract functions
+4. Create asynchronous functions to call your smart contract functions
 
 ```javascript
   async function getMood(){
@@ -126,7 +137,7 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
-- connect your functions to your html buttons
+5. Connect your functions to your html buttons
 
 ```html
 
@@ -135,10 +146,9 @@ provider.listAccounts().then(function(accounts) {
 ```
 
 
-
 ### Test it
 
-- See if it works!
+- Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
  
  
  
