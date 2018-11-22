@@ -38,7 +38,7 @@
     ```
  
 ---
-### Create and Serve a simple Webpage
+### Create and Serve a Simple Webpage
 
 The first step is to create a basic html page.
   
@@ -55,27 +55,10 @@ The first step is to create a basic html page.
  
 
 ---
-### Create a basic Smart Contract
+### Create a Basic Smart Contract
 
- - Create a smart contract on [remix.ethereum.org]
- - You can use your own smart contract with a minimum of a set and get function, something like this:
- 
-```solidity
-pragma solidity ^0.4.24;
-
-contract MoodDiary{
-    
-    string mood;
-    
-    function setMood(string _mood) public{
-        mood = _mood;
-    }
-    
-    function getMood() public view returns(string){
-        return mood;
-    }
-}
-```
+ - You can use any editor you like to make the contract, but we highly recomend the online IDE [remix.ethereum.org]
+ - You can use your own smart contract with a minimum of a set and get function. [Something like this](mood.sol)
  - deploy the contract on the Ropsten Testnet. 
  - test it on the Remix "Run" tab to make sure it works
 
