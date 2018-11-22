@@ -15,13 +15,17 @@
    1. Never used Metamask? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
    
        *The important bits for us are: `1:06 to 4:14`*
-   2. Change to the Ropsten Tesnet:
+   2. Change to the Ropsten Tesnet and get a Copy an account's wallet public address   
    
 <p align="middle">
-<img src="https://btcgeek.com/wp-content/uploads/2018/11/Metamask-Ropsten-Network-1a.png" alt="Metamask-Ropsten-Network-1a.png" width="200">
+<img src="https://btcgeek.com/wp-content/uploads/2018/11/Metamask-Ropsten-Network-1a.png" alt="Metamask-Ropsten-Network-1a.png" width="200">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://www.maketecheasier.com/assets/uploads/2018/03/metamask-key.jpg" alt="metamask-key.jpg" width="200">
+
 </p>
 
-   3. Copy an account's wallet public address
+
+
+
+
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
      1. Never done a metamask transaction? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
      2. [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
