@@ -48,8 +48,7 @@ The first step is to create a basic html page.
  - Create a new directory in your terminal using `mkdir <directory name>`
  - Create a new file called `index.html` by : `touch index.html`
  - In your favourite code editor, open the file (ex: `atom index.html' )
- - Open <html> and <body> tags inside the html page and add some buttons.
-    - [Here is an example](index.html)
+ - Open <html> and <body> tags inside the html page and add some buttons. [Here is an example](index.html)
  
  - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it: 
    ```bash
