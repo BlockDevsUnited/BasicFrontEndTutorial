@@ -8,7 +8,7 @@
  - Create a basic html web page
  - Create a basic solidity smart contract
  - Connect the web page with the smart contracts using Ethersjs.  
- 
+---
 ### Preparation
  
 1. **Download and Install [MetaMask](https://metamask.io)**
@@ -40,7 +40,7 @@
     npm install python -g
     ```
  
- 
+---
 ### Create a basic Front End
 
 The first step is to create a basic html page.
@@ -49,34 +49,8 @@ The first step is to create a basic html page.
  - Create a new file called `index.html` by : `touch index.html`
  - In your favourite code editor, open the file (ex: `atom index.html' )
  - Open <html> and <body> tags inside the html page and add some buttons.
+    - [Here is an example](index.html)
  
- --- 
- ```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Ethersjs Demo</title>
-<style>
-body {
-    background-color: black;
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-<h1>This is my Ethersjs Demo!</h1>
-<p> Here we can set or get the mood: </p>
-
-<button onclick="getMood()"> get Mood </button>
-<button onclick = "setMood()"> set Mood</button>
-
-</body>
-</html>
-```
- ---
  - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it: 
    ```bash
    python -m http.server 1337
