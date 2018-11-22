@@ -8,7 +8,9 @@
  - Create a basic html web page
  - Create a basic solidity smart contract
  - Connect the web page with the smart contracts using Ethersjs.  
+
 ---
+
 ### Preparation
  
 1. **Download and Install [MetaMask](https://metamask.io)**
@@ -38,6 +40,7 @@
     ```
  
 ---
+
 ### Create and Serve a Simple Webpage
 
 The first step is to create a basic html page.
@@ -55,6 +58,7 @@ The first step is to create a basic html page.
  
 
 ---
+
 ### Create a Basic Smart Contract
 
 1. You can use any editor you like to make the contract, but we highly recomend the online IDE [remix.ethereum.org]
@@ -70,7 +74,9 @@ The first step is to create a basic html page.
 <p align="middle">
 <img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
 </p>
+
 ---
+
 ### Connect Your Webpage to Your Smart Contract
 
 - import the ethers source into your html page
