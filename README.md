@@ -57,13 +57,19 @@ The first step is to create a basic html page.
 ---
 ### Create a Basic Smart Contract
 
- - You can use any editor you like to make the contract, but we highly recomend the online IDE [remix.ethereum.org]
- - You can use your own smart contract with a minimum of a set and get function. [Something like this](mood.sol)
- - deploy the contract on the Ropsten Testnet. 
- - test it on the Remix "Run" tab to make sure it works
+1. You can use any editor you like to make the contract, but we highly recomend the online IDE [remix.ethereum.org]
+   - Never used remix before? Checkout [This video](https://www.youtube.com/watch?v=pdJttvcAV1c)
+2. Creat a solidity file `<name>.sol` with a minimum of a set and get function. [Something like this](mood.sol)
+3. Deploy the contract on the Ropsten Testnet.
+   1. Copy your code into the Remix editor
+   2. Complie (and debuf) the code. _Note that it may take a moment to load the compiler_
+   3. **(OPTIONAL)** Under the Run tab (top right) Set your Enviroment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
+   3. Deploy the contract uinde the run tab
+   4. Under Deployed Contracts, test out your functions on the Remix Run tab to make sure your contract works as expected!
+   
 
 ---
-### Connect Front End to Smart Contract
+### Connect Your Webpage to Your Smart Contract
 
 - import the ethers source into your html page
 
