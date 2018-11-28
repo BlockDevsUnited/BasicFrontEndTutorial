@@ -31,15 +31,13 @@
      3. [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
      
      
-3. **Install a http server. Use any you like, but we recommend a simple python instance for beginners:**
+3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
    1. Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
-   2. Install python (version 3) (with NPM in a terminal/command prompt): 
+   2. Install lite-server (with NPM in a terminal/command prompt): 
    
     ```bash
-    npm install python -g
-    npm install http-server -g
+    npm install -g lite-server #install lite-server globally
     ```
- 
 ---
 
 ### Create and Serve a Simple Webpage
@@ -51,11 +49,12 @@ The first step is to create a basic html page.
  - In your favourite code editor, open the file (ex: `atom index.html' )
  - Open <html> and <body> tags inside the html page and add some buttons. [Here is an example](index.html)
  
- - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it: 
-   ```bash
-   python -m http.server 1337
-   ```
- - Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
+ - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it and run: 
+    ```bash
+    lite-server
+    ```
+ 
+ - Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
  
 
 ---
