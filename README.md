@@ -162,3 +162,10 @@ provider.listAccounts().then(function(accounts) {
 
 ### :tada::confetti_ball::tada::confetti_ball::tada: DONE! :tada::confetti_ball::tada::confetti_ball::tada:
 Celebrate! :bowtie: You just made a webpage that interacted with _a real live Ethereum testnet on the internet_! That is not something many folks can say they have done! :rocket:
+
+---
+### Optional - Try to interact with another contract!
+
+We have a `MoodDiary` contract instance created [here](https://ropsten.etherscan.io/tx/0x8da093fdc4ae3e1b469dfff97b414a9800c9fdd8c1c897b6b746faf43aa3b7f8)
+
+The ABI is in [this file](./Mood_ABI.json)
