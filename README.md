@@ -166,6 +166,16 @@ Celebrate! :bowtie: You just made a webpage that interacted with _a real live Et
 ---
 ### Optional - Try to interact with another contract!
 
-We have a `MoodDiary` contract instance created [here](https://ropsten.etherscan.io/tx/0x8da093fdc4ae3e1b469dfff97b414a9800c9fdd8c1c897b6b746faf43aa3b7f8)
+#### Try and use the following information to interact with an existing contract we published on the Roptsen testnet: 
 
-The ABI is in [this file](./Mood_ABI.json)
+- We have a `MoodDiary` contract instance created [at this transaction](https://ropsten.etherscan.io/tx/0x8da093fdc4ae3e1b469dfff97b414a9800c9fdd8c1c897b6b746faf43aa3b7f8)
+
+
+- Here is the contract ([on etherscan](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb))
+  - We also verified our source code to [ropsten.etherscan.io](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is avalible to _the world_! :grin:
+
+
+- The ABI is also in [this file](./Mood_ABI.json)
+
+
+#### This illistraites an important poit: you can also build a dApp _without needning to write the ethereum contract yourself_! If you want to use an existing contract written and already on Ethereum! 
