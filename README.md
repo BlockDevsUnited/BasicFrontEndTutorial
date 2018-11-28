@@ -38,12 +38,6 @@
     ```bash
     npm install -g lite-server #install lite-server globally
     ```
-    
-    Change directory to where your index.html file is, then run:
-    ```
-    lite-server
-    ```
- 
 ---
 
 ### Create and Serve a Simple Webpage
@@ -55,11 +49,12 @@ The first step is to create a basic html page.
  - In your favourite code editor, open the file (ex: `atom index.html' )
  - Open <html> and <body> tags inside the html page and add some buttons. [Here is an example](index.html)
  
- - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it: 
-   ```bash
-   python -m http.server 1337
-   ```
- - Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
+ - Serve the webpage via terminal/command prompt from the directory that has `index.html` in it and run: 
+    ```bash
+    lite-server
+    ```
+ 
+ - Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
  
 
 ---
