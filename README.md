@@ -37,6 +37,7 @@
    
     ```bash
     npm install python -g
+    npm install http-server -g
     ```
  
 ---
