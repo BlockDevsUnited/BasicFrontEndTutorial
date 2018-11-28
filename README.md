@@ -31,13 +31,17 @@
      3. [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
      
      
-3. **Install a http server. Use any you like, but we recommend a simple python instance for beginners:**
+3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
    1. Install NPM ([Download and Instructions](https://www.npmjs.com/)) 
-   2. Install python (version 3) (with NPM in a terminal/command prompt): 
+   2. Install lite-server (with NPM in a terminal/command prompt): 
    
     ```bash
-    npm install python -g
-    npm install http-server -g
+    npm install -g lite-server #install lite-server globally
+    ```
+    
+    Change directory to where your index.html file is, then run:
+    ```
+    lite-server
     ```
  
 ---
