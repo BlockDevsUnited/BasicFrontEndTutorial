@@ -141,6 +141,8 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
+Note: Our example has an input that allows the user to input the mood they want in the HTML Input. 
+
 6. Connect your functions to your html buttons
 
 ```html
