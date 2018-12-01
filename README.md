@@ -141,6 +141,9 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
+Extra Credit: Add an input like we did to the HTML and call it with Javascript and JQuery to set the mood
+to the input.
+
 6. Connect your functions to your html buttons
 
 ```html
