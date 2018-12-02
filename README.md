@@ -95,14 +95,18 @@ Back in your local text editor in `index.html`, add the following code to your h
 <script charset="utf-8"
         src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
         type="text/javascript">
+ </script>
  
- //ADD YOUR CODE HERE
- 
+<script
+  ////////////////////
+  //ADD YOUR CODE HERE
+  ////////////////////      
 </script>
+
 ```
 
 
-2. Define an ethers provider. In our case it is Ropsten:
+2. Inside a new script tag, define an ethers provider. In our case it is Ropsten:
 
 ```javascript
 var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten');
@@ -141,9 +145,6 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
-Extra Credit: Add an input like we did to the HTML and call it with Javascript and JQuery to set the mood
-to the input.
-
 6. Connect your functions to your html buttons
 
 ```html
@@ -151,6 +152,9 @@ to the input.
 <button onclick="getMood()"> get Mood </button>
 <button onclick = "setMood()"> set Mood</button>
 ```
+
+7. *Extra Credit:* Add an input (as we did in [index.html](index.html)) to the HTML and call it with Javascript and JQuery to set the mood
+to the input.
 
 ---
 
