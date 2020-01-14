@@ -105,14 +105,18 @@ Back in your local text editor in `index.html`, add the following code to your h
 
 ```
 
+2. Inside a new script tag, ensure ethereum is enabled:
+```javascript
+window.ethereum.enable();
+```
 
-2. Inside a new script tag, define an ethers provider. In our case it is Ropsten:
+3. Now, define an ethers provider. In our case it is Ropsten:
 
 ```javascript
 var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten');
 ```
 
-3. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
+4. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
 
 ```javascript
   var MoodContractAddress = "<contract address>";
@@ -121,7 +125,7 @@ var provider = new ethers.providers.Web3Provider(web3.currentProvider,'ropsten')
   var signer
 ```
 
-4. Connect the signer to your metamask account (we use `[0]` as the defalut), and define the contract object using your contract address, ABI, and signer.
+5. Connect the signer to your metamask account (we use `[0]` as the defalut), and define the contract object using your contract address, ABI, and signer.
 
 ```javascript
 provider.listAccounts().then(function(accounts) {
@@ -130,7 +134,7 @@ provider.listAccounts().then(function(accounts) {
     })
 ```
 
-5. Create asynchronous functions to call your smart contract functions
+6. Create asynchronous functions to call your smart contract functions
 
 ```javascript
   async function getMood(){
@@ -145,7 +149,7 @@ provider.listAccounts().then(function(accounts) {
   }
 ```
 
-6. Connect your functions to your html buttons
+7. Connect your functions to your html buttons
 
 ```html
 
@@ -153,7 +157,7 @@ provider.listAccounts().then(function(accounts) {
 <button onclick = "setMood()"> set Mood</button>
 ```
 
-7. *Extra Credit:* Add an input (as we did in [index.html](index.html)) to the HTML and call it with Javascript and JQuery to set the mood
+8. *Extra Credit:* Add an input (as we did in [index.html](index.html)) to the HTML and call it with Javascript and JQuery to set the mood
 to the input.
 
 ---
