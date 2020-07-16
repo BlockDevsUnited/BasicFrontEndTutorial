@@ -143,7 +143,7 @@ Back in your local text editor in `index.html`, add the following code to your h
 
 2. Inside a new script tag, ensure ethereum is enabled:
 ```javascript
-await ethereum.enable();
+window.ethereum.enable();
 ```
 
 3. Now, define an ethers provider. In our case it is Ropsten:
@@ -220,7 +220,6 @@ Celebrate! :bowtie: You just made a webpage that interacted with _a real live Et
 git clone https://github.com/BlockDevsUnited/BasicFrontEndTutorial.git
 cd BasicFrontEndTutorial
 lite-server
-
 ```
 
 #### Try and use the following information to interact with an existing contract we published on the Roptsen testnet:
