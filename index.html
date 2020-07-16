@@ -1,7 +1,6 @@
 <html>
 
 <head>
-
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
@@ -46,38 +45,42 @@
     </div>
   </div>
 
-
-
-
-
-
   <script>
     var provider = new ethers.providers.Web3Provider(web3.currentProvider, 'ropsten');
 
-    var MoodContractAddress = "0xC5aFd2D92750612A9619db2282D9037c58Fc22Cb";
-    var MoodContractABI = [{
-      "constant": false,
-      "inputs": [{
-        "name": "_mood",
-        "type": "string"
-      }],
-      "name": "setMood",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }, {
-      "constant": true,
-      "inputs": [],
-      "name": "getMood",
-      "outputs": [{
-        "name": "",
-        "type": "string"
-      }],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    }];
+    var MoodContractAddress = "0xF09d9bAc28E94A03BD66D943Cfc950484A8B9759";
+    let MoodContractABI = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMood",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_mood",
+				"type": "string"
+			}
+		],
+		"name": "setMood",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
 
     provider.listAccounts().then(function (accounts) {
       signer = provider.getSigner(accounts[0]);
