@@ -47,7 +47,7 @@ The first step is to create a basic html page.
  2. In a code editor (e.g. atom, or visual studio), open the folder
  3. Create a new file called `index.html`
  4. Open index.html
- 5. Open <html> and <body> tags
+ 5. Open html and body tags
 ```html
  <html>
     <body>
