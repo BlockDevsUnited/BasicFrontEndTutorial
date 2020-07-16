@@ -60,7 +60,7 @@ The first step is to create a basic html page.
      <body>
        <h1>This is my dApp!</h1>
        <p> Here we can set or get the mood: </p>
-       <label for="mood">Input Mood:</label>
+       <label for="mood">Input Mood:</label> <br>
        <input type="text" id="mood">
      </body>
   ```
@@ -85,32 +85,33 @@ The first step is to create a basic html page.
 
  11. Your front end is now complete!
 
- 12. [Here is an example of the HTML page](index.html)
+ 12. [Here is an example of the HTML code](index.html)
 ---
 
 ### Create a Basic Smart Contract
 
 Now it is time to create a solidity smart contract.
 
-1. You can use any editor you like to make the contract, but we highly recomend the online IDE [remix.ethereum.org]
+1. You can use any editor you like to make the contract, but we highly recommend the online IDE [remix.ethereum.org]
    - Never used remix before? Checkout [This video](https://www.youtube.com/watch?v=pdJttvcAV1c)
 2. go to remix.ethereum.org
-3. in the plugin manager, enable "Solidity Compiler", and "Deploy and Run Transacitons"
+3. in the plugin manager, enable "Solidity Compiler", and "Deploy and Run Transactions"
 4. Create a new solidity file in remix, named `mood.sol`
 5. To save you time we have written the code for you [here](contracts/mood.sol)
 6. Deploy the contract on the Ropsten Testnet.
    1. Copy your code into the Remix editor
-   2. Make sure your metamask is connected to the ropsten testnet.
+   2. Make sure your Metamask is connected to the ropsten testnet.
    3. Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
-   4. **(OPTIONAL)** Under the Run tab (top right) Set your Enviroment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
-   5. Deploy the contract under the "Deploy and Run Transacitons" tab
-   6. Under the Deployed Contracts section, you cantest out your functions on the Remix Run tab to make sure your contract works as expected!
+   5. Make sure you select the right compiler version to match the solidity contract.
+   6. **(OPTIONAL)** Under the Run tab (top right) Set your Environment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
+   7. Deploy the contract under the "Deploy and Run Transactions" tab
+   8. Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
 <p align="middle">
 <img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
 </p>
 
-***Be sure to deploy on Roposen via Remix under the `Injected Web3` enviroment and confirm the deployment transaction in Metamask***
+***Be sure to deploy on Ropsten via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask***
 
 Make a new temporary file to hold:
    - The deployed contract's address
@@ -212,6 +213,15 @@ Celebrate! :bowtie: You just made a webpage that interacted with _a real live Et
 
 ---
 ### Optional - Try to interact with another contract!
+
+### If you had trouble with the tutorial, you can try out the example app provided.
+
+```bash
+git clone https://github.com/BlockDevsUnited/BasicFrontEndTutorial.git
+cd BasicFrontEndTutorial
+lite-server
+
+```
 
 #### Try and use the following information to interact with an existing contract we published on the Roptsen testnet:
 
