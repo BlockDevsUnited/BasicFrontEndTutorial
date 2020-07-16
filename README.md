@@ -142,7 +142,7 @@ Back in your local text editor in `index.html`, add the following code to your h
 
 2. Inside a new script tag, ensure ethereum is enabled:
 ```javascript
-window.ethereum.enable();
+await ethereum.enable();
 ```
 
 3. Now, define an ethers provider. In our case it is Ropsten:
