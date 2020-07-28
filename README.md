@@ -94,7 +94,7 @@ Now it is time to create a solidity smart contract.
 1. You can use any editor you like to make the contract. For this tutorial we recommend the online IDE [remix.ethereum.org]
    - Never used remix before? Checkout [This video](https://www.youtube.com/watch?v=pdJttvcAV1c)
 2. Go to remix.ethereum.org
-3. In the plugin manager, enable "Solidity Compiler", and "Deploy and Run Transactions"
+3. Check out the "Solidity Compiler", and "Deploy and Run Transactions" tabs. If they are not present, you enable them in the plugin manager
 4. Create a new solidity file in remix, named `mood.sol`
 5. To save you time we have written the code for you [here](contracts/mood.sol)
 6. Deploy the contract on the Ropsten Testnet.
