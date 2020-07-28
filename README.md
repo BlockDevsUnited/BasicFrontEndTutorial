@@ -234,7 +234,6 @@ provider.listAccounts().then(function(accounts) {
 Celebrate! :bowtie: You just made a webpage that interacted with _a real live Ethereum testnet on the internet_! That is not something many folks can say they have done! :rocket:
 
 ---
-### Optional - Try to interact with another contract!
 
 ### If you had trouble with the tutorial, you can try out the example app provided.
 
