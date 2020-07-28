@@ -96,9 +96,37 @@ Now it is time to create a solidity smart contract.
 2. Go to remix.ethereum.org
 3. Check out the "Solidity Compiler", and "Deploy and Run Transactions" tabs. If they are not present, you enable them in the plugin manager
 4. Create a new solidity file in remix, named `mood.sol`
-5. To save you time we have written the code for you [here](contracts/mood.sol)
+5. Write the contract
+   1. Specify the solidity version
+   ``` 
+    pragma solidity ^0.4.24;
+   ```
+   2. Define the contract 
+   ``` 
+    contract MoodDiary{
+    
+    }
+   ```
+   3. Inside the contract create a variable called mood
+   ```
+    string mood;
+   ```
+   4. next, Create Read and Write functions 
+   ```
+    //create a function that writes a mood to the smart contract
+    function setMood(string _mood) public{
+        mood = _mood;
+    }
+    
+    //create a function the reads the mood from the smart contract
+    function getMood() public view returns(string){
+        return mood;
+    }
+   ```
+   5. And that's it! your code should look like [this](contracts/mood.sol)
+
 6. Deploy the contract on the Ropsten Testnet.
-   1. Copy your code into the Remix editor
+   1. Make sure no errors show up in your code. 
    2. Make sure your Metamask is connected to the ropsten testnet.
    3. Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
    5. Make sure you select the right compiler version to match the solidity contract.
