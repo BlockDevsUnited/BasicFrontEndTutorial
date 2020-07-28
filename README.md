@@ -134,7 +134,7 @@ Now it is time to create a solidity smart contract.
    - Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
 <p align="middle">
-<img src="https://imgur.com/a/ZTREsRx" alt="remix_deploy_and_test.png" width="200">
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/ZTREsRx" data-context="false" ><a href="//imgur.com/a/ZTREsRx"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </p>
 
 ***Be sure to deploy on Ropsten via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask***
