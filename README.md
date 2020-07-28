@@ -85,7 +85,6 @@ The first step is to create a basic html page.
 
  11. Your front end is now complete!
 
- 12. [Here is an example of the HTML code](index.html)
 ---
 
 ### Create a Basic Smart Contract
