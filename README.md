@@ -20,7 +20,7 @@
    - Change to the Ropsten Tesnet and get a Copy an account's wallet public address   
 
 <p align="middle">
-<img src="https://btcgeek.com/wp-content/uploads/2018/11/Metamask-Ropsten-Network-1a.png" alt="Metamask-Ropsten-Network-1a.png" width="200">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://www.maketecheasier.com/assets/uploads/2018/03/metamask-key.jpg" alt="metamask-key.jpg" width="200">
+
 
 </p>
 
