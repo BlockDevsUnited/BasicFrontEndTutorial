@@ -54,8 +54,8 @@ The first step is to create a basic html page.
     </body>
  </html>
  ```
- 6. We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input,  and buttons.
- 7. Inside the body tag, add some text, a label and input
+ We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input,  and buttons.
+ 6. Inside the body tag, add some text, a label and input.
  ```html
      <body>
        <h1>This is my dApp!</h1>
@@ -65,7 +65,7 @@ The first step is to create a basic html page.
      </body>
   ```
 
- 8. Inside the body tag  add some buttons.
+ 7. Inside the body tag  add some buttons.
  ```html
        <div>
          <button onclick="getMood()"> get Mood </button>
@@ -76,14 +76,14 @@ The first step is to create a basic html page.
 
   ```
 
- 9. Serve the webpage via terminal/command prompt from the directory that has `index.html` in it and run:
+ 8. Serve the webpage via terminal/command prompt from the directory that has `index.html` in it and run:
     ```bash
     lite-server
     ```
 
- 10. Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
+ 9. Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
 
- 11. Your front end is now complete!
+ 10. Your front end is now complete!
 
 ---
 
