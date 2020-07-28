@@ -65,7 +65,7 @@ The first step is to create a basic html page.
      </body>
   ```
 
- 8. inside the body tag  add some buttons.
+ 8. Inside the body tag  add some buttons.
  ```html
        <div>
          <button onclick="getMood()"> get Mood </button>
@@ -125,14 +125,14 @@ Now it is time to create a solidity smart contract.
    ```
    5. And that's it! your code should look like [this](contracts/mood.sol)
 
-6. Deploy the contract on the Ropsten Testnet.
-   1. Make sure no errors show up in your code. 
-   2. Make sure your Metamask is connected to the ropsten testnet.
+6. Deploy the contract on the Ropsten Testnet. 
+   1. Make sure your Metamask is connected to the ropsten testnet.
+   2. Make sure you select the right compiler version to match the solidity contract.
    3. Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
-   5. Make sure you select the right compiler version to match the solidity contract.
-   6. **(OPTIONAL)** Under the Run tab (top right) Set your Environment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
-   7. Deploy the contract under the "Deploy and Run Transactions" tab
-   8. Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
+   4. Make sure no errors show up in your code.
+   5. **(OPTIONAL)** Under the Run tab (top right) Set your Environment to `JavaVM` (your own personal ethereum on your machine). Otherwise use the Ropsten testnet by setting `Injected Web3`
+   6. Deploy the contract under the "Deploy and Run Transactions" tab
+   7. Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
 <p align="middle">
 <img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
