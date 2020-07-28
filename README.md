@@ -14,10 +14,10 @@
 ### Preparation
 
 1. **Download and Install [MetaMask](https://metamask.io)**
-   1. Never used Metamask? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
+   - Never used Metamask? Watch [this explainer video](https://youtu.be/wlm4QcA8c4Q?t=66)
 
        *The important bits for us are: `1:06 to 4:14`*
-   2. Change to the Ropsten Tesnet and get a Copy an account's wallet public address   
+   - Change to the Ropsten Tesnet and get a Copy an account's wallet public address   
 
 <p align="middle">
 <img src="https://btcgeek.com/wp-content/uploads/2018/11/Metamask-Ropsten-Network-1a.png" alt="Metamask-Ropsten-Network-1a.png" width="200">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://www.maketecheasier.com/assets/uploads/2018/03/metamask-key.jpg" alt="metamask-key.jpg" width="200">
@@ -26,13 +26,13 @@
 
 
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
-     1. [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
-     2. [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
+     - [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
+     - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
 
 3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
-   1. Install NPM ([Download and Instructions](https://www.npmjs.com/))
-   2. Install lite-server (with NPM in a terminal/command prompt):
+   - Install NPM ([Download and Instructions](https://www.npmjs.com/))
+   - Install lite-server (with NPM in a terminal/command prompt):
 
     ```bash
     npm install -g lite-server #install lite-server globally
@@ -97,21 +97,21 @@ Now it is time to create a solidity smart contract.
 3. Check out the "Solidity Compiler", and "Deploy and Run Transactions" tabs. If they are not present, enable them in the plugin manager
 4. Create a new solidity file in remix, named `mood.sol`
 5. Write the contract
-   1. Specify the solidity version
+   - Specify the solidity version
    ``` 
     pragma solidity ^0.4.24;
    ```
-   2. Define the contract 
+   - Define the contract 
    ``` 
     contract MoodDiary{
     
     }
    ```
-   3. Inside the contract create a variable called mood
+   - Inside the contract create a variable called mood
    ```
     string mood;
    ```
-   4. Next, create Read and Write functions 
+   - Next, create Read and Write functions 
    ```
     //create a function that writes a mood to the smart contract
     function setMood(string _mood) public{
@@ -123,14 +123,14 @@ Now it is time to create a solidity smart contract.
         return mood;
     }
    ```
-   5. And that's it! your code should look like [this](contracts/mood.sol)
+   - And that's it! your code should look like [this](contracts/mood.sol)
 
 6. Deploy the contract on the Ropsten Testnet. 
-   1. Make sure your Metamask is connected to the Ropsten Testnet.
-   2. Make sure you select the right compiler version to match the solidity contract. (In the compile tab)
-   3. Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
-   4. Deploy the contract under the "Deploy and Run Transactions" tab
-   5. Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
+   - Make sure your Metamask is connected to the Ropsten Testnet.
+   - Make sure you select the right compiler version to match the solidity contract. (In the compile tab)
+   - Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
+   - Deploy the contract under the "Deploy and Run Transactions" tab
+   - Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
 <p align="middle">
 <img src="remix_deploy_and_test.png" alt="remix_deploy_and_test.png" width="200">
