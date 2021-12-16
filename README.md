@@ -133,10 +133,6 @@ Now it is time to create a solidity smart contract.
    - Deploy the contract under the "Deploy and Run Transactions" tab
    - Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
-<p align="middle">
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/ZTREsRx" data-context="false" ><a href="//imgur.com/a/ZTREsRx"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-</p>
-
 ***Be sure to deploy on Ropsten via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask***
 
 Make a new temporary file to hold:
@@ -207,7 +203,7 @@ provider.listAccounts().then(function(accounts) {
 
   async function setMood(){
     let mood = document.getElementById("mood").value
-    setMoodPromise = MoodContract.setMood("patient");
+    setMoodPromise = MoodContract.setMood(mood);
     await setMoodPromise;
   }
 ```
