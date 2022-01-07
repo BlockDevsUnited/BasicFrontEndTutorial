@@ -220,14 +220,14 @@ provider.listAccounts().then(function(accounts) {
 ### Test Your Work Out!
 
 1. Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
-2. Test your functions and approve the transactions as needed through Metamask. Note block times are ~15 seconds... so wait a bit to read the state of the blockchain :sunglasses:
-3. See your contract and transaction info via [https://ropsten.etherscan.io/]
-4. Open a console (`Ctrl + Shift + i`) in the browser to see see the magic happen as you press those buttons :stars:
+2. Test your functions and approve the transactions as needed through Metamask. Note block times are ~15 seconds... so wait a bit to read the state of the blockchain 
+3. See your contract and transaction info via [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+4. Open a console (`Ctrl + Shift + i`) in the browser to see see the magic happen as you press those buttons
 
 ---
 
-### :tada::confetti_ball::tada::confetti_ball::tada: DONE! :tada::confetti_ball::tada::confetti_ball::tada:
-Celebrate! :bowtie: You just made a webpage that interacted with _a real live Ethereum testnet on the internet_! That is not something many folks can say they have done! :rocket:
+### DONE! 
+Celebrate! You just made a webpage that interacted with _a real live Ethereum testnet on the internet_! That is not something many folks can say they have done! 
 
 ---
 
@@ -245,7 +245,7 @@ lite-server
 
 
 - Here is the contract ([on etherscan](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb))
-  - We also verified our source code to [ropsten.etherscan.io](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_! :grin:
+  - We also verified our source code to [ropsten.etherscan.io](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_! 
 
 
 - The ABI is also in [this file](https://github.com/BlockDevsUnited/BasicFrontEndTutorial/blob/master/Mood_ABI.json)
