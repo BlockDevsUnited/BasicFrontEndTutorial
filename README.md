@@ -1,4 +1,4 @@
-# Create An Ethereum Dapp with Ethersjs
+# Level 7 - Create An Ethereum Dapp with Ethersjs
 
  This is a step-by-step tutorial on how to create a front end, deploy a Solidity smart contract, and connect them together.
  We will use [Metamask](https://metamask.io), [Remix IDE](https://remix.ethereum.org) and [Ethersjs](https://github.com/ethers-io/ethers.js/).
