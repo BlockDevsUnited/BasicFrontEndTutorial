@@ -21,9 +21,9 @@ By the end of this tutorial you will be able to create a simple HTML front end w
 
    - Change to the Ropsten Tesnet and get a Copy an account's wallet public address
 
-2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
+2. **Request some Rinkeby Tesnet Ether from a faucet loaded into your Metamask Wallet.**
 
-   - [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
+   - [Faucet link to request funds](https://faucet.rinkeby.io/)
    - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
 3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
@@ -102,35 +102,35 @@ Now it is time to create a solidity smart contract.
 
    ```
    // SPDX-License-Identifier: MIT
-    pragma solidity ^0.8.1;
+   pragma solidity ^0.8.1;
    ```
 
    - Define the contract
 
    ```
-    contract MoodDiary{
+   contract MoodDiary{
 
-    }
+   }
    ```
 
    - Inside the contract create a variable called mood
 
    ```
-    string mood;
+   string mood;
    ```
 
-   - Next, create Read and Write functions
+   - Next, create Read and Write functions 
 
    ```
-    //create a function that writes a mood to the smart contract
-    function setMood(string memory _mood) public{
-        mood = _mood;
-    }
+   //create a function that writes a mood to the smart contract
+   function setMood(string memory _mood) public{
+       mood = _mood;
+   }
 
-    //create a function the reads the mood from the smart contract
-    function getMood() public view returns(string memory){
-        return mood;
-    }
+   //create a function the reads the mood from the smart contract
+   function getMood() public view returns(string memory){
+       return mood;
+   }
    ```
 
    - And that's it! your code
@@ -143,7 +143,7 @@ Now it is time to create a solidity smart contract.
    - Deploy the contract under the "Deploy and Run Transactions" tab
    - Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
-**_Be sure to deploy on Ropsten via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask_**
+**_Be sure to deploy on Rinkeby via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask_**
 
 Make a new temporary file to hold:
 
@@ -164,7 +164,7 @@ Back in your local text editor in `index.html`, add the following code to your h
 <script charset="utf-8"
         src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
         type="text/javascript">
- </script>
+</script>
 
 <script>
   ////////////////////
@@ -185,17 +185,17 @@ window.ethereum.enable();
 ```javascript
 var provider = new ethers.providers.Web3Provider(
   web3.currentProvider,
-  "ropsten"
+  "rinkeby"
 );
 ```
 
 4. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
 
 ```javascript
-  var MoodContractAddress = "<contract address>";
-  var MoodContractABI = <contract ABI>
-  var MoodContract
-  var signer
+var MoodContractAddress = "<contract address>";
+var MoodContractABI = <contract ABI>
+var MoodContract
+var signer
 ```
 
 For the contract ABI, we want to specifically navigate to the [JSON Section](https://docs.soliditylang.org/en/develop/abi-spec.html#json). 
@@ -307,7 +307,7 @@ async function setMood() {
 
 1. Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
 2. Test your functions and approve the transactions as needed through Metamask. Note block times are ~15 seconds... so wait a bit to read the state of the blockchain
-3. See your contract and transaction info via [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+3. See your contract and transaction info via [https://www.rinkeby.etherscan.io/](https://www.rinkeby.etherscan.io/)
 4. Open a console (`Ctrl + Shift + i`) in the browser to see see the magic happen as you press those buttons
 
 ---
