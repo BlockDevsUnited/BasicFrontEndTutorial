@@ -22,7 +22,7 @@ By the end of this tutorial you will be able to create a simple HTML front end w
    - Click Ethereum Mainnet in the top. Change to the Ropsten Tesnet and get a Copy an account's wallet public address
 
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
-   - [Faucet link to request funds](https://ipfs.io/ipfs/QmVAwVKys271P5EQyEfVSxm7BJDKWt42A2gHvNmxLjZMps/)
+   - [Faucet link to request funds](https://faucet.egorfine.com/)
    - [If the faucet above does not work try this one](https://faucet.ropsten.be/)
    - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
