@@ -10,6 +10,10 @@ By the end of this tutorial you will be able to create a simple HTML front end w
 - Connect the web page with the smart contracts using Ethersjs.
 
 ---
+## Prefer a Video?
+If you would rather learn from a video, we have a recording available of this tutorial on our YouTube. Watch the video by clicking on the screenshot below, or go ahead and read the tutorial!
+
+[![Cryptocurrency Tutorial](https://imgur.com/pDcYqIg)](https://www.youtube.com/watch?v=aqxAWLi6UMA "dApp Tutorial")
 
 ### Preparation
 
