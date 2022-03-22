@@ -29,7 +29,6 @@ If you would rather learn from a video, we have a recording available of this tu
 
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
    - [Faucet link to request funds](https://faucet.egorfine.com/)
-   - [If the faucet above does not work try this one](https://faucet.ropsten.be/)
    - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
 3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
@@ -59,7 +58,9 @@ The first step is to create a basic html page.
 </html>
 ```
 
-We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input, and buttons. 6. Inside the body tag, add some text, a label and input.
+We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input, and buttons. 
+
+6. Inside the body tag, add some text, a label and input.
 
 ```html
 <body>
