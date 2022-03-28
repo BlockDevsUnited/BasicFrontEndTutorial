@@ -199,9 +199,8 @@ Back in your local text editor in `index.html`, add the following code to your h
 
 ```html
 <script
-  charset="utf-8"
-  src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
-  type="text/javascript"
+  src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+  type="application/javascript"
 ></script>
 
 <script>
