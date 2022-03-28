@@ -1,18 +1,20 @@
-# Level 7 - Create An Ethereum Dapp with Ethersjs 
+# Level 7 - Create An Ethereum Dapp with Ethers.js
 
 ### (Forked from [BlockDevsUnited/BasicFrontEndTutorial](https://github.com/BlockDevsUnited/BasicFrontEndTutorial))
 
 This is a step-by-step tutorial on how to create a front end, deploy a Solidity smart contract, and connect them together.
-We will use [Metamask](https://metamask.io), [Remix IDE](https://remix.ethereum.org) and [Ethersjs](https://github.com/ethers-io/ethers.js/).
+We will use [Metamask](https://metamask.io), [Remix IDE](https://remix.ethereum.org) and [Ethers.js](https://github.com/ethers-io/ethers.js/).
 
 By the end of this tutorial you will be able to create a simple HTML front end with buttons that can interact with smart contract functions. The tutorial takes place in 3 stages
 
-- Create a basic html web page
-- Create a basic solidity smart contract
-- Connect the web page with the smart contracts using Ethersjs.
+- Create a basic HTML web page
+- Create a basic Solidity smart contract
+- Connect the web page with the smart contracts using Ethers.js.
 
 ---
+
 ## Prefer a Video?
+
 If you would rather learn from a video, we have a recording available of this tutorial on our YouTube. Watch the video by clicking on the screenshot below, or go ahead and read the tutorial!
 
 [![Cryptocurrency Tutorial](https://i.imgur.com/pDcYqIg.png)](https://www.youtube.com/watch?v=aqxAWLi6UMA "dApp Tutorial")
@@ -28,12 +30,13 @@ If you would rather learn from a video, we have a recording available of this tu
    - Click Ethereum Mainnet in the top. Change to the Ropsten Tesnet and get a copy of the account's public address on your Metamask Wallet.
 
 2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
+
    - [Faucet link to request funds](https://faucet.egorfine.com/)
    - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
 3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
 
-   - Install Node JS ([Download and Instructions](https://nodejs.org/en/download/))
+   - Install Node.js ([Download and Instructions](https://nodejs.org/en/download/))
    - Install lite-server (with NPM in a terminal/command prompt):
 
    ```bash
@@ -44,42 +47,70 @@ If you would rather learn from a video, we have a recording available of this tu
 
 ### Create and Serve a Simple Webpage
 
-The first step is to create a basic html page.
+The first step is to create a basic HTML page.
 
 1.  Create a new folder (directory) in your terminal using `mkdir <directory name>`
-2.  In a code editor (e.g. atom, or visual studio), open the folder
+2.  In a code editor (e.g. Atom, or Visual Studio Code), open the folder
 3.  Create a new file called `index.html`
 4.  Open index.html
-5.  Create html and body tags
+5.  Create HTML boilerplate
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First dApp</title>
+  </head>
   <body></body>
 </html>
 ```
 
-We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input, and buttons. 
+We will create an app that simply reads and writes a value to the blockchain. We will need a label, an input, and buttons.
 
 6. Inside the body tag, add some text, a label and input.
 
 ```html
 <body>
-  <h1>This is my dApp!</h1>
-  <p>Here we can set or get the mood:</p>
-  <label for="mood">Input Mood:</label> <br />
-  <input type="text" id="mood" />
+  <div>
+    <h1>This is my dApp!</h1>
+    <p>Here we can set or get the mood:</p>
+    <label for="mood">Input Mood:</label> <br />
+    <input type="text" id="mood" />
+  </div>
 </body>
 ```
 
-7.  Inside the body tag add some buttons.
+7.  Inside the div tag add some buttons.
 
 ```html
-<div>
-  <button onclick="getMood()">get Mood</button>
-</div>
-<div>
-  <button onclick="setMood()">set Mood</button>
-</div>
+<button onclick="getMood()">Get Mood</button>
+<button onclick="setMood()">Set Mood</button>
+```
+
+OPTIONAL: Inside the `<head>` tag, add some styles to make it look nicer
+
+```html
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  div {
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0px 5px 0px;
+  }
+</style>
 ```
 
 8.  Serve the webpage via terminal/command prompt from the directory that has `index.html` in it and run:
@@ -96,10 +127,10 @@ We will create an app that simply reads and writes a value to the blockchain. We
 
 ### Create a Basic Smart Contract
 
-Now it is time to create a solidity smart contract.
+Now it's time to create a Solidity smart contract.
 
 1. You can use any editor you like to make the contract. For this tutorial we recommend the online IDE [Remix](https://remix.ethereum.org)
-   - Never used remix before? Checkout [This video](https://www.youtube.com/watch?v=pdJttvcAV1c)
+   - Never used Remix before? Checkout [This video](https://www.youtube.com/watch?v=pdJttvcAV1c)
 2. Go to [Remix](https://remix.ethereum.org)
 3. Check out the "Solidity Compiler", and "Deploy and Run Transactions" tabs. If they are not present, enable them in the plugin manager
 4. Create a new solidity file in remix, named `mood.sol`
@@ -164,58 +195,44 @@ Make a new temporary file to hold:
 
 Back in your local text editor in `index.html`, add the following code to your html page:
 
-1. Import the Ethersjs source into your `index.html` page inside a new set of script tags:
+1. Import the Ethers.js source into your `index.html` page inside a new set of script tags:
 
 ```html
-<script charset="utf-8"
-        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
-        type="text/javascript">
- </script>
+<script
+  charset="utf-8"
+  src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+  type="text/javascript"
+></script>
 
 <script>
   ////////////////////
   //ADD YOUR CODE HERE
   ////////////////////
 </script>
-
 ```
 
-2. Inside a new script tag, ensure ethereum is enabled:
+2. Inside the script tag, import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
 
 ```javascript
-window.ethereum.enable();
+  const MoodContractAddress = "<contract address>";
+  const MoodContractABI = <contract ABI>
+  let MoodContract;
+  let signer;
 ```
 
-3. Now, define an ethers provider. In our case it is Ropsten:
-
-```javascript
-var provider = new ethers.providers.Web3Provider(
-  web3.currentProvider,
-  "ropsten"
-);
-```
-
-4. Import the contract ABI ([what is that?](https://solidity.readthedocs.io/en/develop/abi-spec.html)) and specify the contract address on our provider's blockchain:
-
-```javascript
-  var MoodContractAddress = "<contract address>";
-  var MoodContractABI = <contract ABI>
-  var MoodContract
-  var signer
-```
-
-For the contract ABI, we want to specifically navigate to the [JSON Section](https://docs.soliditylang.org/en/develop/abi-spec.html#json). 
+For the contract ABI, we want to specifically navigate to the [JSON Section](https://docs.soliditylang.org/en/develop/abi-spec.html#json).
 We need to describe our smart contract in JSON format.
 
 Since we have two methods, this should start as an array, with 2 objects:
 
 ```
-var MoodContractABI = [{}, {}]
+const MoodContractABI = [{}, {}]
 ```
 
 From the above page, each object should have the following fields: `constant`, `inputs`, `name`, `outputs`, `payable`, `stateMutability` and `type`.
 
 For `setMood`, we describe each field below:
+
 - name: `setMood`, self explanatory
 - type: `function`, self explanatory
 - constant: should be `false` because this is a function that updates data
@@ -224,8 +241,8 @@ For `setMood`, we describe each field below:
 - payable: 'false` since this does not accept Ether
 - inputs: this is an array of inputs to the function. Each object in the array should have `internalType`, `name` and `type`, and these are `string`, `_mood` and `string` respectively
 
-
 For `getMood`, we describe each field below:
+
 - name: `getMood`, self explanatory
 - type: `function`, self explanatory
 - constant: should be `true` because this is a function that retrieves data. Even though this is a function, it is basically a getter
@@ -237,7 +254,7 @@ For `getMood`, we describe each field below:
 Your end result should look like this:
 
 ```
-var MoodContractABI = [
+const MoodContractABI = [
 	{
 		"constant": true,
 		"inputs": [],
@@ -271,47 +288,55 @@ var MoodContractABI = [
 ]
 ```
 
-5. Connect the signer to your metamask account (we use `[0]` as the default), and define the contract object using your contract address, ABI, and signer.
+3. Next, Define an ethers provider. In our case it is Ropsten:
 
 ```javascript
-provider.listAccounts().then(function (accounts) {
-  signer = provider.getSigner(accounts[0]);
-  MoodContract = new ethers.Contract(
-    MoodContractAddress,
-    MoodContractABI,
-    signer
-  );
+const provider = new ethers.providers.Web3Provider(window.provider, "ropsten");
+```
+
+4. Request access to the user's wallet and connect the signer to your metamask account (we use `[0]` as the default), and define the contract object using your contract address, ABI, and signer
+
+```javascript
+provider.send("eth_requestAccounts", []).then(() => {
+  provider.listAccounts().then((accounts) => {
+    signer = provider.getSigner(accounts[0]);
+    MoodContract = new ethers.Contract(
+      MoodContractAddress,
+      MoodContractABI,
+      signer
+    );
+  });
 });
 ```
 
-6. Create asynchronous functions to call your smart contract functions
+5. Create asynchronous functions to call your smart contract functions
 
 ```javascript
 async function getMood() {
-  getMoodPromise = MoodContract.getMood();
-  var Mood = await getMoodPromise;
+  const getMoodPromise = MoodContract.getMood();
+  const Mood = await getMoodPromise;
   console.log(Mood);
 }
 
 async function setMood() {
-  let mood = document.getElementById("mood").value;
-  setMoodPromise = MoodContract.setMood(mood);
+  const mood = document.getElementById("mood").value;
+  const setMoodPromise = MoodContract.setMood(mood);
   await setMoodPromise;
 }
 ```
 
-7. Connect your functions to your html buttons
+6. Connect your functions to your html buttons
 
 ```html
-<button onclick="getMood()">get Mood</button>
-<button onclick="setMood()">set Mood</button>
+<button onclick="getMood()">Get Mood</button>
+<button onclick="setMood()">Set Mood</button>
 ```
 
 ---
 
 ### Test Your Work Out!
 
-1. Got your webserver up? Go to [http://127.0.0.1:1337/](http://127.0.0.1:1337/) in your browser to see your page!
+1. Got your webserver up? Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
 2. Test your functions and approve the transactions as needed through Metamask. Note block times are ~15 seconds... so wait a bit to read the state of the blockchain
 3. See your contract and transaction info via [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
 4. Open a console (`Ctrl + Shift + i`) in the browser to see the magic happen as you press those buttons
