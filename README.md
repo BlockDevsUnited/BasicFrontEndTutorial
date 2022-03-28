@@ -290,7 +290,7 @@ const MoodContractABI = [
 3. Next, Define an ethers provider. In our case it is Ropsten:
 
 ```javascript
-const provider = new ethers.providers.Web3Provider(window.provider, "ropsten");
+const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
 ```
 
 4. Request access to the user's wallet and connect the signer to your metamask account (we use `[0]` as the default), and define the contract object using your contract address, ABI, and signer
