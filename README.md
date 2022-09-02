@@ -159,7 +159,7 @@ Back in your local text editor in `index.html`, add the following code to your h
         type="text/javascript">
  </script>
 
-<script
+<script>
   ////////////////////
   //ADD YOUR CODE HERE
   ////////////////////      
