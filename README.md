@@ -349,11 +349,11 @@ lite-server
 
 #### Try and use the following information to interact with an existing contract we published on the Goerli testnet:
 
-- We have a `MoodDiary` contract instance created [at this transaction](https://ropsten.etherscan.io/tx/0x8da093fdc4ae3e1b469dfff97b414a9800c9fdd8c1c897b6b746faf43aa3b7f8)
+- We have a `MoodDiary` contract instance created [at this transaction](https://goerli.etherscan.io/tx/0x0e0eb537cc66df48b9c64b4febde7cb8252190834b63a93bd85080da364c2a29)
 
-- Here is the contract ([on etherscan](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb))
+- Here is the contract ([on etherscan](https://goerli.etherscan.io/address/0xedf58cf7a49b724574cdd5dd30f0f6f5f33fa56a))
 
-  - We also verified our source code to [goerli.etherscan.io](https://goerli.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_!
+  - We also verified our source code to [goerli.etherscan.io](https://goerli.etherscan.io/address/0xedf58cf7a49b724574cdd5dd30f0f6f5f33fa56a#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_!
 
 - The ABI is also in [this file](https://github.com/LearnWeb3DAO/BasicFrontEndTutorial/blob/master/Mood_ABI.json)
 
