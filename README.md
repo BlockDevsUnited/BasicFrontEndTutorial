@@ -1,7 +1,5 @@
 # Level 7 - Create An Ethereum Dapp with Ethers.js
 
-### (Forked from [BlockDevsUnited/BasicFrontEndTutorial](https://github.com/BlockDevsUnited/BasicFrontEndTutorial))
-
 This is a step-by-step tutorial on how to create a front end, deploy a Solidity smart contract, and connect them together.
 We will use [Metamask](https://metamask.io), [Remix IDE](https://remix.ethereum.org) and [Ethers.js](https://github.com/ethers-io/ethers.js/).
 
@@ -27,11 +25,12 @@ If you would rather learn from a video, we have a recording available of this tu
 
      _The important bits for us are: `1:06 to 4:14`_
 
-   - Click Ethereum Mainnet in the top. Change to the Ropsten Tesnet and get a copy of the account's public address on your Metamask Wallet.
+   - Click Ethereum Mainnet in the top. Change to the Goerli Tesnet and get a copy of the account's public address on your Metamask Wallet.
 
-2. **Request some Ropsten Tesnet Ether from a faucet loaded into your Metamask Wallet.**
+2. **Request some Goerli Tesnet Ether from a faucet loaded into your Metamask Wallet.**
 
-   - [Faucet link to request funds](https://faucet.egorfine.com/)
+   - [Faucet link to request funds](https://goerlifaucet.com/)
+   - [Faucet Link 2 - Chainlink](https://faucets.chain.link/)
    - [Blog explaining a faucet and how to use one](https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e)
 
 3. **Install a http server. Use any you like, but we recommend `lite-server` for beginners:**
@@ -173,14 +172,14 @@ Now it's time to create a Solidity smart contract.
 
    - And that's it! Your code should look like [this](https://github.com/LearnWeb3DAO/BasicFrontEndTutorial/blob/master/contracts/mood.sol)
 
-6. Deploy the contract on the Ropsten Testnet.
-   - Make sure your Metamask is connected to the Ropsten Testnet.
+6. Deploy the contract on the Goerli Testnet.
+   - Make sure your Metamask is connected to the Goerli Testnet.
    - Make sure you select the right compiler version to match the solidity contract. (In the compile tab)
    - Compile the code using the "Solidity Compiler" tab. _Note that it may take a moment to load the compiler_
    - Deploy the contract under the "Deploy and Run Transactions" tab
    - Under the Deployed Contracts section, you can test out your functions on the Remix Run tab to make sure your contract works as expected!
 
-**_Be sure to deploy on Ropsten via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask_**
+**_Be sure to deploy on Goerli via Remix under the `Injected Web3` environment and confirm the deployment transaction in Metamask_**
 
 Make a new temporary file to hold:
 
@@ -279,10 +278,10 @@ const MoodContractABI = [
 ]
 ```
 
-3. Next, Define an ethers provider. In our case it is Ropsten:
+3. Next, Define an ethers provider. In our case it is Goerli:
 
 ```javascript
-const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
+const provider = new ethers.providers.Web3Provider(window.ethereum, "goerli");
 ```
 
 4. Request access to the user's wallet and connect the signer to your metamask account (we use `[0]` as the default), and define the contract object using your contract address, ABI, and signer
@@ -329,7 +328,7 @@ async function setMood() {
 
 1. Got your webserver up? Go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) in your browser to see your page!
 2. Test your functions and approve the transactions as needed through Metamask. Note block times are ~15 seconds... so wait a bit to read the state of the blockchain
-3. See your contract and transaction info via [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+3. See your contract and transaction info via [https://goerli.etherscan.io/](https://goerli.etherscan.io/)
 4. Open a console (`Ctrl + Shift + i`) in the browser to see the magic happen as you press those buttons
 
 ---
@@ -348,13 +347,13 @@ cd BasicFrontEndTutorial
 lite-server
 ```
 
-#### Try and use the following information to interact with an existing contract we published on the Roptsen testnet:
+#### Try and use the following information to interact with an existing contract we published on the Goerli testnet:
 
 - We have a `MoodDiary` contract instance created [at this transaction](https://ropsten.etherscan.io/tx/0x8da093fdc4ae3e1b469dfff97b414a9800c9fdd8c1c897b6b746faf43aa3b7f8)
 
 - Here is the contract ([on etherscan](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb))
 
-  - We also verified our source code to [ropsten.etherscan.io](https://ropsten.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_!
+  - We also verified our source code to [goerli.etherscan.io](https://goerli.etherscan.io/address/0xc5afd2d92750612a9619db2282d9037c58fc22cb#code) as an added measure for you to verify what the contract is exactly, and also the ABI is available to _the world_!
 
 - The ABI is also in [this file](https://github.com/LearnWeb3DAO/BasicFrontEndTutorial/blob/master/Mood_ABI.json)
 
